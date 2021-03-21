@@ -1,5 +1,6 @@
 # tdd-example
 
+This project provides an example of a basic restful web service with sufficient unit test coverage as to be a useful example of how to do Test Driven Development.
 
 ## Requirements 
 
