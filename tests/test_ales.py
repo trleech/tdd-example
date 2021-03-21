@@ -92,6 +92,9 @@ def test_create_ale_negative_alcohol_by_volume(client):
     )
     assert res.status_code == 422
 
+    res = client.get("/ales")
+    assert len(res.get_json()) == 0
+
 
 def test_create_ale_120_alcohol_by_volume(client):
     res = client.post(
@@ -102,3 +105,6 @@ def test_create_ale_120_alcohol_by_volume(client):
         },
     )
     assert res.status_code == 422
+
+    res = client.get("/ales")
+    assert len(res.get_json()) == 0
